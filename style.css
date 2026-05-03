@@ -94,7 +94,7 @@ nav {
 .photo-stack {
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 16px;
   flex-shrink: 0;
 }
 
