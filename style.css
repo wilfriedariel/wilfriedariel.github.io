@@ -412,6 +412,20 @@ nav {
 .exp-item.faded   .exp-detail { color: #94A3B8; }
 .exp-item.fainter .exp-detail { color: #CBD5E1; }
 
+.exp-advisor {
+  font-size: 9.5px;
+  color: #94A3B8;
+  margin-top: 3px;
+}
+
+.exp-advisor a {
+  color: #2563EB;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.exp-advisor a:hover { text-decoration: underline; }
+
 /* ═══════════════════════════════════════════
    RECENT NEWS
 ═══════════════════════════════════════════ */
