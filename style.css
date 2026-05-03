@@ -90,7 +90,14 @@ nav {
   border-bottom: 1px solid #EEF2FF;
 }
 
-/* Photo */
+/* Photo stack */
+.photo-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  flex-shrink: 0;
+}
+
 .photo-wrap {
   width: 82px;
   height: 82px;
@@ -98,6 +105,12 @@ nav {
   flex-shrink: 0;
   overflow: hidden;
   background: linear-gradient(135deg, #3B82F6, #6366F1);
+}
+
+.photo-wrap-sm {
+  width: 82px;
+  height: 66px;
+  border-radius: 10px;
 }
 
 .photo {
