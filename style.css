@@ -94,7 +94,7 @@ nav {
 .photo-stack {
   display: flex;
   flex-direction: column;
-  gap: 34px;
+  gap: 8px;
   flex-shrink: 0;
 }
 
@@ -109,8 +109,9 @@ nav {
 
 .photo-wrap-sm {
   width: 82px;
-  height: 66px;
-  border-radius: 12px;
+  height: 82px;
+  border-radius: 14px;
+  overflow: hidden;
 }
 
 .photo {
