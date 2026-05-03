@@ -94,14 +94,14 @@ nav {
 .photo-stack {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 34px;
   flex-shrink: 0;
 }
 
 .photo-wrap {
   width: 82px;
   height: 82px;
-  border-radius: 12px;
+  border-radius: 14px;
   flex-shrink: 0;
   overflow: hidden;
   background: linear-gradient(135deg, #3B82F6, #6366F1);
@@ -110,7 +110,7 @@ nav {
 .photo-wrap-sm {
   width: 82px;
   height: 66px;
-  border-radius: 10px;
+  border-radius: 12px;
 }
 
 .photo {
