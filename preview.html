@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Design Preview · Wilfried Ariel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background: #111; padding: 40px 20px 60px; -webkit-font-smoothing: antialiased; }
+    .grid { max-width: 1100px; margin: 0 auto; }
+    h1 { font-family: 'Inter', sans-serif; color: #fff; font-size: 13px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 32px; opacity: 0.5; }
+
+    .option-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #666;
+      margin-bottom: 10px;
+    }
+
+    .option-wrap { margin-bottom: 56px; }
+
+    /* ═══════════════════════════════
+       OPTION A — Paper / Editorial
+    ═══════════════════════════════ */
+    .opt-a {
+      background: #F2EDE4;
+      min-height: 100vh;
+      padding: 36px 24px 48px;
+      border-radius: 4px;
+    }
+
+    .opt-a nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 40px;
+      border-bottom: 1px solid #C8BFB2;
+      padding-bottom: 12px;
+    }
+
+    .opt-a .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #1A1208;
+      letter-spacing: 0.3px;
+    }
+
+    .opt-a .nav-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .opt-a .nav-links a {
+      font-size: 11px;
+      font-weight: 500;
+      color: #7A6E62;
+      text-decoration: none;
+      letter-spacing: 0.4px;
+    }
+
+    .opt-a .nav-links a.active { color: #1A1208; font-weight: 700; }
+
+    .opt-a .card {
+      background: #FFFCF8;
+      border: 1px solid #D8D0C4;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .opt-a .hero {
+      padding: 32px 32px 28px;
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+      border-bottom: 1px solid #EDE8DF;
+    }
+
+    .opt-a .photo-stack { display: flex; flex-direction: column; gap: 8px; flex-shrink: 0; }
+
+    .opt-a .photo-box {
+      width: 80px; height: 80px;
+      border-radius: 4px;
+      overflow: hidden;
+      background: #C8BFB2;
+    }
+
+    .opt-a .photo-box img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+
+    .opt-a .name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: #1A1208;
+      line-height: 1.1;
+    }
+
+    .opt-a .chinese {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 14px;
+      font-weight: 400;
+      color: #A89880;
+      margin-left: 10px;
+    }
+
+    .opt-a .title {
+      font-size: 11px;
+      font-weight: 600;
+      color: #8B5E3C;
+      margin-top: 6px;
+      letter-spacing: 0.2px;
+    }
+
+    .opt-a .bio {
+      font-size: 12.5px;
+      color: #4A4037;
+      margin-top: 10px;
+      line-height: 1.72;
+      max-width: 460px;
+    }
+
+    .opt-a .tags { display: flex; gap: 5px; flex-wrap: wrap; margin-top: 12px; }
+
+    .opt-a .tag {
+      font-size: 9px;
+      padding: 3px 9px;
+      border-radius: 2px;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+    }
+
+    .opt-a .tag-f { background: #EDE2D4; color: #5C3D1E; border: 1px solid #D4C0A8; }
+    .opt-a .tag-g { background: #DAE8DA; color: #2D5A2D; border: 1px solid #B8D4B8; }
+    .opt-a .tag-r { background: #F0DDD8; color: #7A2E1E; border: 1px solid #DDB8AE; }
+
+    .opt-a .links { display: flex; gap: 16px; margin-top: 12px; flex-wrap: wrap; }
+
+    .opt-a .link {
+      font-size: 10.5px;
+      color: #8B5E3C;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .opt-a .section-label {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 11px;
+      font-style: italic;
+      color: #A89880;
+      margin-bottom: 12px;
+      border-bottom: 1px solid #EDE8DF;
+      padding-bottom: 5px;
+    }
+
+    .opt-a .body-cols {
+      display: flex;
+      padding: 24px 32px;
+      gap: 0;
+    }
+
+    .opt-a .col-left {
+      flex: 1;
+      min-width: 0;
+      padding-right: 28px;
+      border-right: 1px solid #EDE8DF;
+    }
+
+    .opt-a .col-right {
+      width: 195px;
+      flex-shrink: 0;
+      padding-left: 22px;
+    }
+
+    .opt-a .pub {
+      padding: 11px 14px;
+      border-radius: 2px;
+      margin-bottom: 8px;
+    }
+
+    .opt-a .pub-feat { background: #F5EFE6; border-left: 2px solid #8B5E3C; }
+    .opt-a .pub-muted { background: #F8F6F3; border-left: 2px solid #D4C0A8; }
+
+    .opt-a .pub-title { font-size: 11.5px; font-weight: 700; color: #1A1208; line-height: 1.45; }
+    .opt-a .pub-authors { font-size: 9.5px; color: #7A6E62; margin-top: 4px; }
+
+    .opt-a .badge { font-size: 8px; padding: 2px 7px; border-radius: 2px; font-weight: 700; }
+    .opt-a .badge-main { background: #8B5E3C; color: #FFFCF8; }
+    .opt-a .badge-thesis { background: #EDE2D4; color: #5C3D1E; border: 1px solid #D4C0A8; }
+
+    .opt-a .pub-meta { display: flex; gap: 6px; margin-top: 8px; align-items: center; flex-wrap: wrap; }
+    .opt-a .pub-link { font-size: 9.5px; color: #8B5E3C; font-weight: 600; text-decoration: none; }
+
+    .opt-a .news-item { margin-bottom: 12px; border-top: 1px solid #EDE8DF; padding-top: 10px; }
+    .opt-a .news-item.first { border-top: none; padding-top: 0; }
+    .opt-a .news-date { font-size: 8px; font-weight: 700; padding: 2px 7px; border-radius: 2px; display: inline-block; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .opt-a .nd-warm { background: #EDE2D4; color: #5C3D1E; }
+    .opt-a .nd-green { background: #DAE8DA; color: #2D5A2D; }
+    .opt-a .nd-muted { background: #EEEBE6; color: #7A6E62; }
+    .opt-a .news-text { font-size: 11px; color: #4A4037; line-height: 1.56; }
+
+    .opt-a footer {
+      border-top: 1px solid #EDE8DF;
+      padding: 12px 32px;
+      display: flex;
+      justify-content: space-between;
+      background: #F5EFE6;
+      font-size: 9px;
+      color: #A89880;
+    }
+
+    /* ═══════════════════════════════
+       OPTION B — Slate / Dark
+    ═══════════════════════════════ */
+    .opt-b {
+      background: #0D1117;
+      padding: 36px 24px 48px;
+      border-radius: 4px;
+    }
+
+    .opt-b nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    .opt-b .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: #E6EDF3;
+      letter-spacing: 0.2px;
+    }
+
+    .opt-b .nav-links {
+      display: flex;
+      gap: 22px;
+      border: 1px solid #30363D;
+      padding: 7px 20px;
+      border-radius: 6px;
+      background: rgba(255,255,255,0.03);
+    }
+
+    .opt-b .nav-links a {
+      font-size: 11px;
+      font-weight: 500;
+      color: #8B949E;
+      text-decoration: none;
+    }
+
+    .opt-b .nav-links a.active { color: #E6EDF3; }
+
+    .opt-b .card {
+      background: #161B22;
+      border: 1px solid #30363D;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .opt-b .hero {
+      padding: 30px 30px 24px;
+      display: flex;
+      gap: 22px;
+      align-items: flex-start;
+      border-bottom: 1px solid #21262D;
+    }
+
+    .opt-b .photo-stack { display: flex; flex-direction: column; gap: 8px; flex-shrink: 0; }
+
+    .opt-b .photo-box {
+      width: 80px; height: 80px;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #21262D;
+      border: 1px solid #30363D;
+    }
+
+    .opt-b .photo-box img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+
+    .opt-b .name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 30px;
+      font-weight: 700;
+      color: #E6EDF3;
+      line-height: 1.1;
+    }
+
+    .opt-b .chinese {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 14px;
+      font-weight: 400;
+      color: #58A6FF;
+      margin-left: 10px;
+    }
+
+    .opt-b .title {
+      font-size: 11px;
+      font-weight: 600;
+      color: #58A6FF;
+      margin-top: 6px;
+    }
+
+    .opt-b .bio {
+      font-size: 12.5px;
+      color: #8B949E;
+      margin-top: 10px;
+      line-height: 1.7;
+      max-width: 460px;
+    }
+
+    .opt-b .tags { display: flex; gap: 5px; flex-wrap: wrap; margin-top: 12px; }
+
+    .opt-b .tag {
+      font-size: 9px;
+      padding: 3px 9px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    .opt-b .tag-f { background: #0D2137; color: #58A6FF; border: 1px solid #1F4B7A; }
+    .opt-b .tag-g { background: #0D2B1E; color: #3FB950; border: 1px solid #196832; }
+    .opt-b .tag-r { background: #2D0D0D; color: #F85149; border: 1px solid #6E1D1D; }
+
+    .opt-b .links { display: flex; gap: 14px; margin-top: 13px; flex-wrap: wrap; }
+    .opt-b .link { font-size: 10.5px; color: #58A6FF; font-weight: 600; text-decoration: none; }
+
+    .opt-b .section-label {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 13px;
+      font-style: italic;
+      color: #484F58;
+      margin-bottom: 12px;
+    }
+
+    .opt-b .body-cols {
+      display: flex;
+      padding: 24px 30px;
+      gap: 0;
+    }
+
+    .opt-b .col-left {
+      flex: 1; min-width: 0;
+      padding-right: 26px;
+      border-right: 1px solid #21262D;
+    }
+
+    .opt-b .col-right {
+      width: 195px; flex-shrink: 0;
+      padding-left: 22px;
+    }
+
+    .opt-b .pub { padding: 12px 14px; border-radius: 6px; margin-bottom: 8px; }
+    .opt-b .pub-feat { background: #0D1B2A; border-left: 2px solid #58A6FF; }
+    .opt-b .pub-muted { background: #0D1117; border-left: 2px solid #21262D; border: 1px solid #21262D; }
+
+    .opt-b .pub-title { font-size: 11.5px; font-weight: 700; color: #E6EDF3; line-height: 1.45; }
+    .opt-b .pub-muted .pub-title { color: #8B949E; }
+    .opt-b .pub-authors { font-size: 9.5px; color: #484F58; margin-top: 4px; }
+
+    .opt-b .badge { font-size: 8px; padding: 2px 7px; border-radius: 4px; font-weight: 700; }
+    .opt-b .badge-main { background: #1F6FEB; color: #fff; }
+    .opt-b .badge-thesis { background: #2D1B00; color: #E3B341; border: 1px solid #5A3B00; }
+
+    .opt-b .pub-meta { display: flex; gap: 6px; margin-top: 8px; align-items: center; flex-wrap: wrap; }
+    .opt-b .pub-link { font-size: 9.5px; color: #58A6FF; font-weight: 600; text-decoration: none; }
+
+    .opt-b .news-item { margin-bottom: 12px; border-top: 1px solid #21262D; padding-top: 10px; }
+    .opt-b .news-item.first { border-top: none; padding-top: 0; }
+    .opt-b .news-date { font-size: 8px; font-weight: 700; padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .opt-b .nd-blue { background: #0D2137; color: #58A6FF; }
+    .opt-b .nd-purple { background: #1A0D2B; color: #BC8CFF; }
+    .opt-b .nd-muted { background: #161B22; color: #484F58; border: 1px solid #21262D; }
+    .opt-b .news-text { font-size: 11px; color: #8B949E; line-height: 1.58; }
+
+    .opt-b footer {
+      border-top: 1px solid #21262D;
+      padding: 12px 30px;
+      display: flex;
+      justify-content: space-between;
+      background: #0D1117;
+      font-size: 9px;
+      color: #484F58;
+    }
+
+    /* ═══════════════════════════════
+       OPTION C — Current (reference)
+    ═══════════════════════════════ */
+    .opt-ref { opacity: 0.6; }
+  </style>
+</head>
+<body>
+  <div class="grid">
+    <h1>Design Options — pick one to apply</h1>
+
+    <!-- ── OPTION A: Paper/Editorial ─────────────── -->
+    <div class="option-wrap">
+      <div class="option-label" style="color:#C8BFB2;">Option A — Paper / Editorial (warm, serif, no gradients)</div>
+      <div class="opt-a">
+        <nav>
+          <span class="nav-logo">Wilfried Ariel</span>
+          <div class="nav-links">
+            <a href="#">About</a>
+            <a href="#" class="active">Research</a>
+            <a href="#">CV</a>
+            <a href="#">Contact</a>
+          </div>
+        </nav>
+        <div class="card">
+          <div class="hero">
+            <div class="photo-stack">
+              <div class="photo-box"><img src="assets/face.jpg?v=3" alt=""></div>
+              <div class="photo-box"><img src="assets/photo.jpg" alt="" style="object-position:center 18%"></div>
+            </div>
+            <div style="flex:1;min-width:0;">
+              <div class="name">Wilfried Ariel Mulyawan <span class="chinese">陳順福</span></div>
+              <div class="title">PhD Student · NTU CCDS × Nanyang Business School · GIFTS Lab</div>
+              <div class="bio">I build AI systems at the intersection of quantitative finance, DeFi, and economic modeling.</div>
+              <div class="tags">
+                <span class="tag tag-f">FinTech AI</span>
+                <span class="tag tag-f">Quantitative Finance</span>
+                <span class="tag tag-f">AI for Economics</span>
+                <span class="tag tag-f">Decentralized Finance</span>
+                <span class="tag tag-g">AI Ethics</span>
+                <span class="tag tag-g">AI for Education</span>
+                <span class="tag tag-g">Social Computing</span>
+                <span class="tag tag-r">Real-World Models</span>
+                <span class="tag tag-r">Explainable AI</span>
+                <span class="tag tag-r">AI in Game Theory</span>
+              </div>
+              <div class="links">
+                <a href="#" class="link">✉ arielwilfried0@gmail.com</a>
+                <a href="#" class="link">LinkedIn</a>
+                <a href="#" class="link">Scholar</a>
+                <a href="#" class="link">CV</a>
+              </div>
+            </div>
+            <div style="flex-shrink:0;margin-left:-10px;">
+              <img src="assets/logo-ntu.jpg" style="height:90px;width:auto;object-fit:contain;opacity:0.75;" alt="NTU">
+            </div>
+          </div>
+          <div class="body-cols">
+            <div class="col-left">
+              <div class="section-label">Publications</div>
+              <div class="pub pub-feat">
+                <div class="pub-title">Seeing Culture: A Benchmark for Visual Reasoning and Grounding</div>
+                <div class="pub-authors">Burak Satar, Zhixin Ma, Patrick, Wilfried Ariel Mulyawan · SMU Multimedia Lab</div>
+                <div class="pub-meta">
+                  <span class="badge badge-main">EMNLP 2025 Main</span>
+                  <a href="#" class="pub-link">[paper]</a>
+                  <a href="#" class="pub-link">[arXiv]</a>
+                  <a href="#" class="pub-link">[code]</a>
+                </div>
+              </div>
+              <div class="pub pub-muted">
+                <div class="pub-title">Designing LQ45 Stock Trading Strategies with Machine Learning</div>
+                <div class="pub-authors">Wilfried Ariel Mulyawan · Institut Teknologi Bandung</div>
+                <div class="pub-meta"><span class="badge badge-thesis">Bachelor Thesis · 2025</span><a href="#" class="pub-link">[thesis]</a></div>
+              </div>
+            </div>
+            <div class="col-right">
+              <div class="section-label">Recent</div>
+              <div class="news-item first">
+                <span class="news-date nd-warm">May 2026</span>
+                <p class="news-text">PhD offer accepted. Joining <strong>GIFTS Lab, NTU</strong>.</p>
+              </div>
+              <div class="news-item">
+                <span class="news-date nd-green">Feb 2026</span>
+                <p class="news-text">Managing Director at an undisclosed prediction market fund. 7-fig USD volume.</p>
+              </div>
+              <div class="news-item">
+                <span class="news-date nd-warm">Nov 2025</span>
+                <p class="news-text"><em>Seeing Culture</em> at EMNLP 2025 Main.</p>
+              </div>
+              <div class="news-item">
+                <span class="news-date nd-muted">Aug 2023</span>
+                <p class="news-text">IISMA Awardee. 1 of 14 from 12,000+ applicants.</p>
+              </div>
+            </div>
+          </div>
+          <footer>
+            <span>© 2026 Wilfried Ariel Mulyawan</span>
+            <span>Built with GitHub Pages</span>
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── OPTION B: Slate / Dark ─────────────────── -->
+    <div class="option-wrap">
+      <div class="option-label" style="color:#8B949E;">Option B — Slate / Dark (GitHub-inspired, high contrast)</div>
+      <div class="opt-b">
+        <nav>
+          <span class="nav-logo">Wilfried Ariel</span>
+          <div class="nav-links">
+            <a href="#">About</a>
+            <a href="#" class="active">Research</a>
+            <a href="#">CV</a>
+            <a href="#">Contact</a>
+          </div>
+        </nav>
+        <div class="card">
+          <div class="hero">
+            <div class="photo-stack">
+              <div class="photo-box"><img src="assets/face.jpg?v=3" alt=""></div>
+              <div class="photo-box"><img src="assets/photo.jpg" alt="" style="object-position:center 18%"></div>
+            </div>
+            <div style="flex:1;min-width:0;">
+              <div class="name">Wilfried Ariel Mulyawan <span class="chinese">陳順福</span></div>
+              <div class="title">PhD Student · NTU CCDS × Nanyang Business School · GIFTS Lab</div>
+              <div class="bio">I build AI systems at the intersection of quantitative finance, DeFi, and economic modeling.</div>
+              <div class="tags">
+                <span class="tag tag-f">FinTech AI</span>
+                <span class="tag tag-f">Quantitative Finance</span>
+                <span class="tag tag-f">AI for Economics</span>
+                <span class="tag tag-f">Decentralized Finance</span>
+                <span class="tag tag-g">AI Ethics</span>
+                <span class="tag tag-g">AI for Education</span>
+                <span class="tag tag-g">Social Computing</span>
+                <span class="tag tag-r">Real-World Models</span>
+                <span class="tag tag-r">Explainable AI</span>
+                <span class="tag tag-r">AI in Game Theory</span>
+              </div>
+              <div class="links">
+                <a href="#" class="link">✉ arielwilfried0@gmail.com</a>
+                <a href="#" class="link">LinkedIn</a>
+                <a href="#" class="link">Scholar</a>
+                <a href="#" class="link">CV</a>
+              </div>
+            </div>
+            <div style="flex-shrink:0;margin-left:-10px;">
+              <img src="assets/logo-ntu.jpg" style="height:90px;width:auto;object-fit:contain;opacity:0.6;filter:brightness(2);" alt="NTU">
+            </div>
+          </div>
+          <div class="body-cols">
+            <div class="col-left">
+              <div class="section-label">Publications</div>
+              <div class="pub pub-feat">
+                <div class="pub-title">Seeing Culture: A Benchmark for Visual Reasoning and Grounding</div>
+                <div class="pub-authors">Burak Satar, Zhixin Ma, Patrick, Wilfried Ariel Mulyawan · SMU Multimedia Lab</div>
+                <div class="pub-meta">
+                  <span class="badge badge-main">EMNLP 2025 Main</span>
+                  <a href="#" class="pub-link">[paper]</a>
+                  <a href="#" class="pub-link">[arXiv]</a>
+                  <a href="#" class="pub-link">[code]</a>
+                </div>
+              </div>
+              <div class="pub pub-muted">
+                <div class="pub-title">Designing LQ45 Stock Trading Strategies with Machine Learning</div>
+                <div class="pub-authors">Wilfried Ariel Mulyawan · Institut Teknologi Bandung</div>
+                <div class="pub-meta"><span class="badge badge-thesis">Bachelor Thesis · 2025</span><a href="#" class="pub-link">[thesis]</a></div>
+              </div>
+            </div>
+            <div class="col-right">
+              <div class="section-label">Recent</div>
+              <div class="news-item first">
+                <span class="news-date nd-blue">May 2026</span>
+                <p class="news-text">PhD offer accepted. Joining <strong style="color:#E6EDF3;">GIFTS Lab, NTU</strong>.</p>
+              </div>
+              <div class="news-item">
+                <span class="news-date nd-purple">Feb 2026</span>
+                <p class="news-text">Managing Director at an undisclosed prediction market fund. 7-fig USD volume.</p>
+              </div>
+              <div class="news-item">
+                <span class="news-date nd-blue">Nov 2025</span>
+                <p class="news-text"><em>Seeing Culture</em> at EMNLP 2025 Main.</p>
+              </div>
+              <div class="news-item">
+                <span class="news-date nd-muted">Aug 2023</span>
+                <p class="news-text">IISMA Awardee. 1 of 14 from 12,000+ applicants.</p>
+              </div>
+            </div>
+          </div>
+          <footer>
+            <span>© 2026 Wilfried Ariel Mulyawan</span>
+            <span>Built with GitHub Pages</span>
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    <p style="font-family:Inter;font-size:11px;color:#444;text-align:center;margin-top:8px;">Tell me which one (A or B) and I'll apply it to the full site. Or mix elements from both.</p>
+
+  </div>
+</body>
+</html>
