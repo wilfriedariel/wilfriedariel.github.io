@@ -50,8 +50,9 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=8">
+  <link rel="preload" as="image" href="assets/face.jpg?v=4">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=11">
 </head>
 <body>
   <div class="page">
@@ -67,31 +68,10 @@
       </div>
     </nav>
 
-    <!-- ── CARD ─────────────────────────────────────── -->
     <main class="card">
 
       <!-- ── HERO ───────────────────────────────────── -->
       <section class="hero" id="about">
-
-        <div class="photo-stack">
-          <div class="photo-wrap">
-            <img
-              src="assets/face.jpg?v=3"
-              alt="Wilfried Ariel Mulyawan"
-              class="photo"
-              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
-            >
-            <div class="photo-fallback">W</div>
-          </div>
-          <div class="photo-wrap photo-wrap-sm">
-            <img
-              src="assets/photo.jpg"
-              alt="Wilfried Ariel Mulyawan — handstand"
-              class="photo"
-              style="object-position: center 18%;"
-            >
-          </div>
-        </div>
 
         <div class="hero-info">
           <h1 class="name">
@@ -100,45 +80,108 @@
           </h1>
 
           <div class="title-line">
-            <span class="title-text">PhD Student · NTU CCDS x Nanyang Business School · GIFTS Lab</span>
+            <span class="title-text">PhD Student · NTU CCDS × Nanyang Business School · GIFTS Lab</span>
           </div>
 
           <p class="bio">
-            I build AI systems at the intersection of quantitative finance, DeFi, and economic modeling. PhD student at NTU CCDS x Nanyang Business School · GIFTS Lab.
+            Wilfried Ariel Mulyawan is a PhD Student at <a href="https://www.ntu.edu.sg" target="_blank" rel="noopener">Nanyang Technological University</a>, jointly between the College of Computing &amp; Data Science and Nanyang Business School, in the GIFTS Lab. He is advised by <a href="https://www.linwilliamcong.com/" target="_blank" rel="noopener">Prof. Will Cong</a> (previously Cornell) and <a href="https://personal.ntu.edu.sg/gaocong/" target="_blank" rel="noopener">Prof. Gao Cong</a>. His research sits at the intersection of quantitative finance, decentralized finance, and AI — with a focus on how machine learning systems can be designed, evaluated, and deployed in real financial and economic environments.
           </p>
 
-          <div class="tags">
-            <span class="tag blue">FinTech AI</span>
-            <span class="tag blue">Quantitative Finance</span>
-            <span class="tag blue">AI for Economics</span>
-            <span class="tag blue">Decentralized Finance</span>
-            <span class="tag green">AI Ethics</span>
-            <span class="tag green">AI for Education</span>
-            <span class="tag green">Social Computing</span>
-            <span class="tag red">Real-World Models</span>
-            <span class="tag red">Explainable AI</span>
-            <span class="tag red">AI in Game Theory</span>
-          </div>
+          <p class="bio">
+            Before NTU, Wilfried was an AI Research Engineer at <a href="https://www.smu.edu.sg" target="_blank" rel="noopener">Singapore Management University</a> with <a href="https://scholar.google.com/citations?user=HM39HrUAAAAJ&amp;hl=en" target="_blank" rel="noopener">Prof. Chong-Wah Ngo</a>, working on vision–language models, cultural AI, and ASEAN benchmarks (EMNLP 2025). He completed his B.Eng. at <a href="https://www.itb.ac.id" target="_blank" rel="noopener">Institut Teknologi Bandung</a>, with a thesis on machine-learning trading strategies for Indonesia's LQ45 index. Outside research, he served as Managing Director of an undisclosed prediction market fund.
+          </p>
 
           <div class="links">
-            <a href="mailto:arielwilfried0@gmail.com" class="link">✉ arielwilfried0@gmail.com</a>
+            <a href="mailto:arielwilfried0@gmail.com" class="link">arielwilfried0@gmail.com</a>
             <a href="https://linkedin.com/in/wilfriedariel" target="_blank" rel="noopener" class="link">LinkedIn</a>
             <a href="#" class="link">Google Scholar</a>
             <a href="assets/CV_Wilfried_Ariel.pdf" target="_blank" rel="noopener" class="link link-btn">↓ CV</a>
           </div>
         </div>
 
-        <div class="hero-affil">
-          <img src="assets/logo-ntu.jpg" alt="Nanyang Technological University" class="ntu-logo">
+        <div class="photo-stack">
+          <div class="photo-wrap">
+            <img
+              src="assets/face.jpg?v=4"
+              alt="Wilfried Ariel Mulyawan"
+              class="photo"
+              width="280" height="320"
+              fetchpriority="high"
+              decoding="async"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+            >
+            <div class="photo-fallback">W</div>
+          </div>
+          <div class="photo-wrap photo-wrap-sm">
+            <img
+              src="assets/photo.jpg?v=2"
+              alt="Wilfried Ariel Mulyawan — handstand"
+              class="photo"
+              width="280" height="200"
+              loading="lazy"
+              decoding="async"
+              style="object-position: center 18%;"
+            >
+          </div>
         </div>
+
       </section>
 
-      <!-- ── BODY COLUMNS ──────────────────────────── -->
-      <div class="body-cols">
+      <!-- ── BODY (single column, Andrew Ng style) ──── -->
+      <div class="body-cols" id="research">
 
-        <!-- LEFT: Publications + Experience -->
-        <div class="col-left" id="research">
+        <div class="col-left">
 
+          <!-- Research interests as a tag block -->
+          <section class="section">
+            <h2 class="section-title">Research interests</h2>
+            <div class="tags">
+              <span class="tag blue">FinTech AI</span>
+              <span class="tag blue">Quantitative Finance</span>
+              <span class="tag blue">AI for Economics</span>
+              <span class="tag blue">Decentralized Finance</span>
+              <span class="tag green">AI Ethics</span>
+              <span class="tag green">AI for Education</span>
+              <span class="tag green">Social Computing</span>
+              <span class="tag red">Real-World Models</span>
+              <span class="tag red">Explainable AI</span>
+              <span class="tag red">AI in Game Theory</span>
+            </div>
+          </section>
+
+          <!-- Affiliations / Companies (Andrew Ng style cards) -->
+          <section class="section">
+            <h2 class="section-title">Affiliations</h2>
+            <div class="affil-grid">
+
+              <div class="affil-card">
+                <div class="affil-logo"><img src="assets/logo-ntu.jpg" alt="NTU" loading="lazy" decoding="async"></div>
+                <div class="affil-role">PhD Student — Nanyang Technological University</div>
+                <div class="affil-desc">College of Computing &amp; Data Science × Nanyang Business School, GIFTS Lab. Research at the intersection of quantitative finance, DeFi, and AI. 2026 — present.</div>
+              </div>
+
+              <div class="affil-card tint">
+                <div class="affil-logo"><img src="assets/logo-smu.jpg" alt="SMU" loading="lazy" decoding="async"></div>
+                <div class="affil-role">AI Research Engineer — Singapore Management University</div>
+                <div class="affil-desc">Multimedia Lab. Vision–language models, cultural AI, and ASEAN benchmarks under Prof. Chong-Wah Ngo. Co-authored EMNLP 2025 paper. 2025.</div>
+              </div>
+
+              <div class="affil-card tint">
+                <div class="affil-logo"><img src="assets/logo-ntust.png" alt="NTUST" loading="lazy" decoding="async"></div>
+                <div class="affil-role">Research Intern — NTUST CITI Lab, Taipei</div>
+                <div class="affil-desc">RFMS and outcome-economy systems under Prof. Shuo Yan Chou. Demand forecasting and smart-home platforms. 2023.</div>
+              </div>
+
+              <div class="affil-card">
+                <div class="affil-logo"><img src="assets/logo-itb.png" alt="ITB" loading="lazy" decoding="async"></div>
+                <div class="affil-role">B.Eng. — Institut Teknologi Bandung</div>
+                <div class="affil-desc">Thesis on designing machine-learning trading strategies for Indonesia's LQ45 index. Signal design, feature engineering, systematic backtesting. 2020 — 2025.</div>
+              </div>
+
+            </div>
+          </section>
+
+          <!-- Publications -->
           <section class="section">
             <h2 class="section-title">Publications</h2>
 
@@ -147,11 +190,11 @@
               <div class="pub-authors">Burak Satar, Zhixin Ma, Patrick, Wilfried Ariel Mulyawan · SMU Multimedia Lab</div>
               <div class="pub-meta">
                 <span class="badge blue-solid">EMNLP 2025 Main</span>
-                <a href="https://aclanthology.org/2025.emnlp-main.1131/" target="_blank" rel="noopener" class="pub-link">[paper]</a>
-                <a href="https://arxiv.org/abs/2509.16517" target="_blank" rel="noopener" class="pub-link">[arXiv]</a>
-                <a href="https://github.com/buraksatar/seeingculture" target="_blank" rel="noopener" class="pub-link">[code]</a>
-                <a href="https://huggingface.co/datasets/Multimedia-SMU/seeingculture-benchmark" target="_blank" rel="noopener" class="pub-link">[data]</a>
-                <a href="https://seeingculture-benchmark.github.io/" target="_blank" rel="noopener" class="pub-link">[site]</a>
+                <a href="https://aclanthology.org/2025.emnlp-main.1131/" target="_blank" rel="noopener" class="pub-link">paper</a>
+                <a href="https://arxiv.org/abs/2509.16517" target="_blank" rel="noopener" class="pub-link">arXiv</a>
+                <a href="https://github.com/buraksatar/seeingculture" target="_blank" rel="noopener" class="pub-link">code</a>
+                <a href="https://huggingface.co/datasets/Multimedia-SMU/seeingculture-benchmark" target="_blank" rel="noopener" class="pub-link">data</a>
+                <a href="https://seeingculture-benchmark.github.io/" target="_blank" rel="noopener" class="pub-link">site</a>
               </div>
             </div>
 
@@ -160,85 +203,43 @@
               <div class="pub-authors">Wilfried Ariel Mulyawan · Institut Teknologi Bandung</div>
               <div class="pub-meta">
                 <span class="badge yellow">Bachelor Thesis · 2025</span>
-                <a href="https://digilib.itb.ac.id/gdl/view_data/perancangan-strategi-perdagangan-saham-lq45-dengan-bantuan-pembelajaran-mesin/14420020?rows=1&per_page=2" target="_blank" rel="noopener" class="pub-link">[thesis]</a>
+                <a href="https://digilib.itb.ac.id/gdl/view_data/perancangan-strategi-perdagangan-saham-lq45-dengan-bantuan-pembelajaran-mesin/14420020?rows=1&per_page=2" target="_blank" rel="noopener" class="pub-link">thesis</a>
               </div>
             </div>
           </section>
 
+          <!-- Recent news -->
           <section class="section">
-            <h2 class="section-title">Experience</h2>
+            <h2 class="section-title">Recent</h2>
 
-            <div class="exp-item">
-              <div class="exp-logo blue">
-                <img src="assets/logo-smu.jpg" alt="SMU" onerror="this.outerHTML='<span>SMU</span>'">
-              </div>
-              <div class="exp-info">
-                <div class="exp-role">AI Research Engineer · Singapore Management University</div>
-                <div class="exp-detail">VLMs · Cultural AI · ASEAN Benchmarks · 2025</div>
-                <div class="exp-advisor">Advised by <a href="https://scholar.google.com/citations?user=HM39HrUAAAAJ&hl=en" target="_blank" rel="noopener">Prof. Chong Wah Ngo</a></div>
-              </div>
+            <div class="news-item first">
+              <span class="news-date">May 2026</span>
+              <p class="news-text">PhD offer accepted. Joining <strong>GIFTS Lab, NTU</strong>. Advised by Prof. Will Cong (previously Cornell) and Prof. Gao Cong.</p>
             </div>
 
-            <div class="exp-item">
-              <div class="exp-logo green">
-                <img src="assets/logo-ntust.png" alt="NTUST" onerror="this.outerHTML='<span>NTUST</span>'">
-              </div>
-              <div class="exp-info">
-                <div class="exp-role">Research Intern · NTUST CITI Lab, Taipei</div>
-                <div class="exp-detail">RFMS · Outcome Economy · 2023</div>
-                <div class="exp-advisor">Advised by <a href="https://scholar.google.com/citations?user=FBH93t0AAAAJ&hl=en" target="_blank" rel="noopener">Prof. Shuo Yan Chou</a></div>
-              </div>
+            <div class="news-item">
+              <span class="news-date">Feb 2026</span>
+              <p class="news-text">Managing Director at an undisclosed prediction market fund. 7-figure USD volume.</p>
             </div>
 
-            <div class="exp-item">
-              <div class="exp-logo purple">
-                <img src="assets/logo-itb.png" alt="ITB" onerror="this.outerHTML='<span>ITB</span>'">
-              </div>
-              <div class="exp-info">
-                <div class="exp-role">Lab Assistant · ITB Innovation Lab</div>
-                <div class="exp-detail">ML trading systems · LQ45 thesis · 2023–2024</div>
-                <div class="exp-role" style="margin-top:7px;">Lab Assistant · ITB Physics Lab</div>
-                <div class="exp-detail">Physics experiments · Teaching · Grading · 2021</div>
-              </div>
+            <div class="news-item">
+              <span class="news-date">Nov 2025</span>
+              <p class="news-text"><em>Seeing Culture</em> presented at EMNLP 2025 Main Conference.</p>
+            </div>
+
+            <div class="news-item faded">
+              <span class="news-date">Aug 2023</span>
+              <p class="news-text">IISMA Awardee. 1 of 14 selected from 12,000+ applicants for a fully funded semester exchange abroad.</p>
             </div>
           </section>
 
-        </div>
-
-        <!-- RIGHT: Recent + ClustrMaps -->
-        <div class="col-right">
-
-          <h2 class="section-title">Recent</h2>
-
-          <div class="news-item first">
-            <span class="news-date blue">May 2026</span>
-            <p class="news-text">PhD offer accepted 🎓 Joining <strong>GIFTS Lab, NTU</strong> · Advised by Prof. Will Cong (previously Cornell) and Prof. Gao Cong.</p>
-          </div>
-
-          <div class="news-item">
-            <span class="news-date purple">Feb 2026</span>
-            <p class="news-text">Managing Director at an undisclosed prediction market fund. 7-fig USD volume.</p>
-          </div>
-
-          <div class="news-item">
-            <span class="news-date blue">Nov 2025</span>
-            <p class="news-text"><em>Seeing Culture</em> presented at EMNLP 2025 Main Conference.</p>
-          </div>
-
-          <div class="news-item faded">
-            <span class="news-date muted">Aug 2023</span>
-            <p class="news-text">IISMA Awardee. 1 of 14 selected from 12,000+ applicants for a fully funded semester exchange abroad.</p>
-          </div>
-
-          <div class="clustr-wrap">
-            <script type="text/javascript" src="//mapmyvisitors.com/globe.js?d=dzOnjBhbydRZWBNbs8cArqInT0p_pQ18tftR1NO_Dzg&cl=ffffff&w=185"></script>
-            <script>var _a=document.getElementById('mmvst_a');if(_a)_a.href='https://mapmyvisitors.com/web/d/dzOnjBhbydRZWBNbs8cArqInT0p_pQ18tftR1NO_Dzg';</script>
-          </div>
+          <!-- Globe widget (visitors map) -->
+          <div class="clustr-wrap" id="globe-wrap" style="min-height:200px;"></div>
 
         </div>
+
       </div>
 
-      <!-- ── FOOTER ─────────────────────────────────── -->
       <footer>
         <span>© 2026 Wilfried Ariel Mulyawan</span>
         <span>Built with GitHub Pages</span>
@@ -246,5 +247,32 @@
 
     </main>
   </div>
+  <script>
+  // Lazy-load globe widget when scrolled near viewport
+  (function(){
+    var wrap = document.getElementById('globe-wrap');
+    if (!wrap) return;
+    var loaded = false;
+    var load = function(){
+      if (loaded) return; loaded = true;
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = '//mapmyvisitors.com/globe.js?d=dzOnjBhbydRZWBNbs8cArqInT0p_pQ18tftR1NO_Dzg&cl=ffffff&w=185';
+      s.onload = function(){
+        var a = document.getElementById('mmvst_a');
+        if (a) a.href = 'https://mapmyvisitors.com/web/d/dzOnjBhbydRZWBNbs8cArqInT0p_pQ18tftR1NO_Dzg';
+      };
+      wrap.appendChild(s);
+    };
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){ if (e.isIntersecting) { load(); io.disconnect(); } });
+      }, { rootMargin: '200px' });
+      io.observe(wrap);
+    } else {
+      window.addEventListener('load', load);
+    }
+  })();
+  </script>
 </body>
 </html>
