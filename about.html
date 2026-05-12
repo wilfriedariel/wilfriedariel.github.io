@@ -4,16 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Primary SEO -->
   <title>About · Wilfried Ariel Mulyawan | PhD Student · NTU CCDS · AI in Finance</title>
   <meta name="title" content="About · Wilfried Ariel Mulyawan | PhD Student · NTU CCDS">
-  <meta name="description" content="About Wilfried Ariel Mulyawan (陳順福) — PhD student at NTU CCDS × Nanyang Business School, GIFTS Lab. Background, research interests in AI for finance, economics, and social systems.">
+  <meta name="description" content="About Wilfried Ariel Mulyawan (陳順福). PhD student at NTU CCDS × Nanyang Business School, GIFTS Lab. Background, research interests in AI for finance, economics, and social systems.">
   <meta name="keywords" content="Wilfried Ariel Mulyawan, about, NTU CCDS, GIFTS Lab, AI finance, quantitative finance, ITB, SMU, research interests">
   <meta name="author" content="Wilfried Ariel Mulyawan">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://wilfriedariel.github.io/about.html">
 
-  <!-- Open Graph -->
   <meta property="og:type" content="profile">
   <meta property="og:url" content="https://wilfriedariel.github.io/about.html">
   <meta property="og:title" content="About · Wilfried Ariel Mulyawan | PhD Student · NTU CCDS">
@@ -21,7 +19,6 @@
   <meta property="og:image" content="https://wilfriedariel.github.io/assets/face.jpg">
   <meta property="og:site_name" content="Wilfried Ariel Mulyawan">
 
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="About · Wilfried Ariel Mulyawan | NTU CCDS">
   <meta name="twitter:description" content="PhD student at NTU CCDS × Nanyang Business School, GIFTS Lab. AI in quantitative finance, DeFi, economics.">
@@ -29,359 +26,370 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="assets/face.jpg?v=4">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=11">
+  <link rel="stylesheet" href="style.css?v=29">
   <style>
-    /* ── ABOUT PAGE EXTRAS ───────────────────────── */
+    /* ── ABOUT SECTION: photos left, bullets right ── */
     .about-wrap {
       display: flex;
-      gap: 0;
-      padding: 30px 30px 32px;
+      gap: 56px;
+      padding: 56px 0 0;
+      align-items: flex-start;
     }
 
-    /* LEFT sidebar */
     .about-sidebar {
-      width: 180px;
+      width: 280px;
       flex-shrink: 0;
-      padding-right: 28px;
-      border-right: 1px solid #EEF2FF;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      text-align: center;
+      align-items: stretch;
+      text-align: left;
     }
 
-    .about-photo-wrap {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
+    .about-photo-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .about-photo-wrap,
+    .about-photo-wrap-sm {
+      width: 280px;
+      border-radius: 3px;
       overflow: hidden;
-      background: linear-gradient(135deg, #3B82F6, #6366F1);
-      margin-bottom: 14px;
+      background: var(--bg-2);
+      box-shadow: 0 1px 2px rgba(31, 27, 22, 0.06);
     }
 
-    .about-photo-wrap img {
+    .about-photo-wrap   { height: 330px; }
+    .about-photo-wrap-sm { height: 280px; }
+
+    .about-ntu-card {
+      width: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .about-ntu-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      image-rendering: -webkit-optimize-contrast;
+    }
+
+    .about-photo-wrap img,
+    .about-photo-wrap-sm img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       object-position: center top;
+      display: block;
     }
 
     .about-name {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 17px;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 22px;
       font-weight: 700;
-      color: #0F172A;
-      line-height: 1.25;
-      margin-bottom: 4px;
+      color: var(--ink);
+      line-height: 1.2;
+      margin-top: 4px;
     }
 
     .about-subtitle {
-      font-size: 10px;
-      color: #64748B;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 14px;
+      font-style: italic;
+      color: var(--ink-2);
       line-height: 1.5;
-      margin-bottom: 14px;
+      margin-top: 6px;
+      margin-bottom: 18px;
     }
 
     .about-links {
       display: flex;
-      gap: 10px;
-      justify-content: center;
+      gap: 14px;
       flex-wrap: wrap;
-      margin-bottom: 18px;
+      margin-bottom: 24px;
+      align-items: center;
     }
 
     .about-link-icon {
-      font-size: 10px;
-      font-weight: 700;
-      color: #2563EB;
+      width: 38px;
+      height: 38px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--link);
       text-decoration: none;
-      padding: 3px 8px;
-      border-radius: 5px;
-      background: #DBEAFE;
-      border: 1px solid #93C5FD;
-      transition: background 0.15s;
+      background: transparent;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      padding: 0;
+      transition: color 0.15s, border-color 0.15s, background 0.15s;
     }
 
-    .about-link-icon:hover { background: #BFDBFE; }
+    .about-link-icon svg {
+      width: 17px;
+      height: 17px;
+      fill: currentColor;
+    }
+
+    .about-link-icon:hover {
+      background: var(--bg-2);
+      color: var(--link-2);
+      border-color: var(--link-2);
+    }
 
     .sidebar-logos {
       width: 100%;
-      margin-top: 16px;
-      border-top: 1px solid #EEF2FF;
-      padding-top: 14px;
+      margin-top: 8px;
+      border-top: 1px solid var(--line);
+      padding-top: 22px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .sidebar-logo-cell {
+      background: var(--bg-2);
+      border: 1px solid var(--line);
+      border-radius: 3px;
+      height: 110px;
       display: flex;
-      flex-direction: column;
       align-items: center;
-      gap: 10px;
+      justify-content: center;
+      padding: 14px;
     }
 
     .sidebar-logo-img {
-      width: 110px;
-      height: 60px;
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
       object-fit: contain;
       display: block;
+      image-rendering: -webkit-optimize-contrast;
     }
 
-    .sidebar-globe {
+    .sidebar-map {
       width: 100%;
-      margin-top: 14px;
-      border-top: 1px solid #EEF2FF;
-      padding-top: 12px;
+      margin-top: 8px;
+      border-top: 1px solid var(--line);
+      padding-top: 22px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
     }
 
-    /* RIGHT main content */
+    .sidebar-map:not(:empty)::before {
+      content: 'Visitors';
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 16px;
+      font-style: italic;
+      font-weight: 600;
+      color: var(--ink-2);
+    }
+
     .about-main {
       flex: 1;
       min-width: 0;
-      padding-left: 28px;
-    }
-
-    .about-section {
-      margin-bottom: 28px;
+      padding-top: 4px;
     }
 
     .about-h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 22px;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 32px;
       font-weight: 700;
-      color: #1E3A8A;
-      margin-bottom: 14px;
-      letter-spacing: 0.2px;
+      color: var(--ink);
+      letter-spacing: -0.3px;
+      margin-bottom: 24px;
+      line-height: 1.1;
     }
 
+    /* Bullet list — easier scan, warm palette */
     .about-bullets {
       list-style: disc;
-      padding-left: 18px;
+      padding-left: 22px;
     }
 
     .about-bullets li {
-      font-size: 12px;
-      color: #334155;
+      font-size: 15.5px;
+      color: var(--ink-2);
       line-height: 1.75;
-      margin-bottom: 10px;
-    }
-
-    .about-bullets li a {
-      color: #2563EB;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .about-bullets li a:hover { text-decoration: underline; }
-
-    /* Research interest callout */
-    .interest-callout {
-      background: #EFF6FF;
-      border-left: 3px solid #2563EB;
-      border-radius: 0 8px 8px 0;
-      padding: 12px 16px;
-      margin-bottom: 18px;
-    }
-
-    .interest-callout p {
-      font-size: 11.5px;
-      font-style: italic;
-      color: #1E40AF;
-      line-height: 1.7;
-    }
-
-    /* Research clusters */
-    .interest-cluster {
       margin-bottom: 16px;
     }
 
-    .cluster-title {
-      font-size: 11px;
-      font-weight: 800;
-      color: #0F172A;
-      margin-bottom: 5px;
+    .about-bullets li::marker { color: var(--ink-3); }
+
+    .about-bullets li:last-child { margin-bottom: 0; }
+
+    .about-bullets li strong { color: var(--ink); font-weight: 600; }
+
+    .about-bullets li a {
+      color: var(--link);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(125, 75, 39, 0.35);
+      padding-bottom: 1px;
+      transition: color 0.15s, border-color 0.15s;
     }
 
-    .cluster-desc {
-      font-size: 11.5px;
-      color: #475569;
-      line-height: 1.68;
-      margin-bottom: 6px;
+    .about-bullets li a:hover { color: var(--link-2); border-bottom-color: var(--link-2); }
+
+    /* ── RESEARCH INTERESTS — lives inside about-main, below bullets ── */
+    .interests-block {
+      margin-top: 56px;
+      padding-top: 36px;
+      border-top: 1px solid var(--line);
     }
 
-    .cluster-tags {
-      display: flex;
-      gap: 5px;
-      flex-wrap: wrap;
+    .interests-block .about-h2 { margin-bottom: 24px; }
+
+    .interests-para {
+      font-size: 16px;
+      color: var(--ink-2);
+      line-height: 1.78;
+      margin-bottom: 20px;
+      max-width: 720px;
     }
 
-    @media (max-width: 640px) {
-      .about-wrap { flex-direction: column; padding: 20px; }
-      .about-sidebar {
-        width: 100%;
-        padding-right: 0;
-        border-right: none;
-        border-bottom: 1px solid #EEF2FF;
-        padding-bottom: 20px;
-        margin-bottom: 20px;
+    .interests-para:last-child { margin-bottom: 0; }
+
+    .interests-para strong {
+      color: var(--ink);
+      font-weight: 600;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 18px;
+      font-style: italic;
+      letter-spacing: 0.1px;
+      margin-right: 4px;
+    }
+
+    @media (max-width: 760px) {
+      .about-wrap {
+        flex-direction: column;
+        gap: 36px;
+        padding: 36px 0 0;
       }
-      .about-main { padding-left: 0; }
+      .about-sidebar { width: 100%; }
+      .about-photo-stack { flex-direction: row; gap: 12px; }
+      .about-photo-wrap, .about-photo-wrap-sm { width: 50%; height: 240px; }
+      .about-h2 { font-size: 26px; }
+      .interests-wrap { padding-top: 52px; margin-top: 52px; }
     }
   </style>
 </head>
 <body>
   <div class="page">
 
-    <!-- ── NAV ─────────────────────────────────────── -->
     <nav>
-      <span class="nav-logo">Wilfried Ariel</span>
+      <a href="index.html" class="nav-logo">Wilfried Ariel Mulyawan <span class="nav-chinese">陳順福</span></a>
       <div class="nav-links">
-        <a href="index.html#about" class="active">About</a>
+        <a href="about.html" class="active">About</a>
         <a href="index.html#research">Research</a>
         <a href="assets/CV_Wilfried_Ariel.pdf" target="_blank" rel="noopener">CV</a>
         <a href="mailto:arielwilfried0@gmail.com">Contact</a>
       </div>
     </nav>
 
-    <!-- ── CARD ─────────────────────────────────────── -->
     <main class="card">
-      <div class="about-wrap">
 
-        <!-- ── SIDEBAR ───────────────────────────────── -->
+      <!-- ── ABOUT SECTION: photos + bullets ────────── -->
+      <section class="about-wrap">
         <aside class="about-sidebar">
-          <div class="about-photo-wrap">
-            <img src="assets/face.jpg?v=4" alt="Wilfried Ariel Mulyawan" width="100" height="100" decoding="async">
+
+          <div class="about-photo-stack">
+            <div class="about-photo-wrap">
+              <img src="assets/face.jpg?v=4" alt="Wilfried Ariel Mulyawan" width="280" height="330" fetchpriority="high" decoding="async">
+            </div>
+            <div class="about-ntu-card">
+              <img src="assets/logo-ntu-clean.png" alt="NTU" loading="lazy" decoding="async">
+            </div>
+            <div class="about-photo-wrap-sm">
+              <img src="assets/photo.jpg?v=2" alt="Wilfried Ariel Mulyawan handstand" width="280" height="280" loading="lazy" decoding="async">
+            </div>
           </div>
 
           <div class="about-name">Wilfried Ariel Mulyawan</div>
           <div class="about-subtitle">
-            PhD Student<br>
+            PhD Student in Artificial Intelligence<br>
             NTU CCDS × Nanyang Business School<br>
             GIFTS Lab
           </div>
 
           <div class="about-links">
-            <a href="https://scholar.google.com" target="_blank" rel="noopener" class="about-link-icon">Scholar</a>
-            <a href="cv.html" class="about-link-icon">CV</a>
-            <a href="https://linkedin.com/in/wilfriedariel" target="_blank" rel="noopener" class="about-link-icon">LinkedIn</a>
-            <a href="mailto:arielwilfried0@gmail.com" class="about-link-icon">Email</a>
+            <a href="https://scholar.google.com" target="_blank" rel="noopener" class="about-link-icon" aria-label="Google Scholar" title="Google Scholar">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.242 13.769L0.5 9.5 12 1l11.5 8.5-4.742 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
+            </a>
+            <a href="https://linkedin.com/in/wilfriedariel" target="_blank" rel="noopener" class="about-link-icon" aria-label="LinkedIn" title="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/wilfriedariel/" target="_blank" rel="noopener" class="about-link-icon" aria-label="Instagram" title="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.85 5.85 0 0 0-2.13 1.38A5.85 5.85 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.73 1.46 1.38 2.13.67.65 1.34 1.07 2.13 1.38.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.85 5.85 0 0 0 2.13-1.38c.65-.67 1.07-1.34 1.38-2.13.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.85 5.85 0 0 0-1.38-2.13A5.85 5.85 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 12 18.16 6.16 6.16 0 0 0 12 5.84zm0 10.16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.41-11.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg>
+            </a>
+            <!-- X (Twitter) — replace href with your X profile URL -->
+            <a href="#" target="_blank" rel="noopener" class="about-link-icon" aria-label="X (Twitter)" title="X">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <!-- GitHub — replace href with your GitHub profile URL -->
+            <a href="#" target="_blank" rel="noopener" class="about-link-icon" aria-label="GitHub" title="GitHub">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.4 3-.405 1.02.005 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            </a>
           </div>
 
-          <div class="sidebar-logos">
-            <img src="assets/logo-ntu.jpg"   alt="NTU"   class="sidebar-logo-img" loading="lazy" decoding="async" width="110" height="60">
-            <img src="assets/logo-smu.jpg"   alt="SMU"   class="sidebar-logo-img" loading="lazy" decoding="async" width="110" height="60">
-            <img src="assets/logo-ntust.png" alt="NTUST" class="sidebar-logo-img" loading="lazy" decoding="async" width="110" height="60">
-            <img src="assets/logo-itb.png"   alt="ITB"   class="sidebar-logo-img" loading="lazy" decoding="async" width="110" height="60">
+          <!-- Visitor map (MapMyVisitors interactive widget) -->
+          <div class="sidebar-map" id="visitor-map">
+            <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=P5CGpXgZ1azLfrJNoP6b26QXZT2igoppWJTuP63-s3I&cl=f5efe3&w=a"></script>
           </div>
-
-          <div class="sidebar-globe" id="globe-wrap" style="min-height:148px;"></div>
         </aside>
 
-        <!-- ── MAIN ──────────────────────────────────── -->
         <div class="about-main">
+          <h2 class="about-h2">About</h2>
+          <ul class="about-bullets">
+            <li>
+              I am a <strong>PhD student</strong> at NTU CCDS × Nanyang Business School, GIFTS Lab. My main advisor is <a href="https://www.linwilliamcong.com/" target="_blank" rel="noopener">Prof. Will Cong</a> (previously at Cornell), and I am co-advised by <a href="https://personal.ntu.edu.sg/gaocong/" target="_blank" rel="noopener">Prof. Gao Cong</a>. I work on questions at the boundary of AI in finance, FinTech, quantitative finance, and social computing.
+            </li>
+            <li>
+              My current research interests beyond the core focus include <strong>real-world modeling</strong>, <strong>explainable AI</strong>, <strong>market making</strong>, <strong>prediction markets</strong>, <strong>AI for game theory</strong> (Pokémon VGC), <strong>AI for education</strong>, and <strong>deep learning for protein design</strong>.
+            </li>
+            <li>
+              Outside research, I managed an undisclosed prediction market fund as <strong>Managing Director</strong>, with 7-figure USD in volume. Real-world weird market forecasting is something I think about a lot. (I mainly traded US egg market prices.)
+            </li>
+            <li>
+              Before starting my PhD, I was an <strong>AI Research Engineer</strong> at Singapore Management University, working on vision–language models, cultural AI, and ASEAN benchmarks with <a href="https://scholar.google.com/citations?user=HM39HrUAAAAJ&hl=en" target="_blank" rel="noopener">Prof. Chong-Wah Ngo</a>.
+            </li>
+            <li>
+              Before that, a <strong>Research Intern</strong> at NTUST CITI Lab in Taipei under <a href="https://scholar.google.com/citations?user=FBH93t0AAAAJ&hl=en" target="_blank" rel="noopener">Prof. Shuo Yan Chou</a>, working on RFMS and leading the outcome-economy research there.
+            </li>
+          </ul>
 
-          <div class="about-section">
-            <div class="about-h2">About Me</div>
-            <ul class="about-bullets">
-              <li>
-                I am a <strong>PhD student</strong> at <strong>NTU CCDS × Nanyang Business School</strong>, GIFTS Lab. My advisors are
-                <a href="https://www.linwilliamcong.com/" target="_blank" rel="noopener">Prof. Will Cong</a> (previously at Cornell) and
-                <a href="https://personal.ntu.edu.sg/gaocong/" target="_blank" rel="noopener">Prof. Gao Cong</a>.
-                I work on questions at the boundary of quantitative finance, decentralized finance, and AI.
-              </li>
-              <li>
-                Before starting my PhD, I was an <strong>AI Research Engineer</strong> at Singapore Management University, working on vision-language models, cultural AI, and ASEAN benchmarks with
-                <a href="https://scholar.google.com/citations?user=HM39HrUAAAAJ&hl=en" target="_blank" rel="noopener">Prof. Chong-Wah Ngo</a>.
-                Before that, a <strong>Research Intern</strong> at NTUST CITI Lab in Taipei under
-                <a href="https://scholar.google.com/citations?user=FBH93t0AAAAJ&hl=en" target="_blank" rel="noopener">Prof. Shuo Yan Chou</a>,
-                working on RFMS and outcome economy systems.
-              </li>
-              <li>
-                I did my undergraduate at <strong>Institut Teknologi Bandung</strong>. My thesis was on building ML-based trading strategies for Indonesia's LQ45 index, covering signal design, feature engineering, and systematic backtesting.
-              </li>
-              <li>
-                Outside of research, I managed an undisclosed prediction market fund as <strong>Managing Director</strong>, with 7-figure USD in volume. Real-world market forecasting is something I think about a lot.
-              </li>
-            </ul>
-          </div>
+          <div class="interests-block">
+            <h2 class="about-h2">Research interests</h2>
 
-          <div class="about-section">
-            <div class="about-h2">Research Interests</div>
+            <p class="interests-para">
+              <strong>Finance &amp; Economic AI.</strong> My research applies AI to quantitative finance, DeFi protocols, and economic modeling. This covers algorithmic trading and market microstructure, token mechanism design, and decentralized governance: the parts of finance where the questions are noisy, adversarial, and impossible to fully simulate.
+            </p>
 
-            <div class="interest-callout">
-              <p>I build AI systems that sit at the junction of financial markets, economic mechanisms, and social systems. Deployability and interpretability matter as much to me as the math.</p>
-            </div>
+            <p class="interests-para">
+              <strong>Society, Ethics &amp; Education.</strong> I think about how AI shapes and is shaped by social systems. Fairness, accountability, and how to design AI that opens up access to education and knowledge rather than closing it off. As autonomous hedge funds rise, accountability becomes a real question: who do we blame if something goes wrong?
+            </p>
 
-            <div class="interest-cluster">
-              <div class="cluster-title">Finance & Economic AI</div>
-              <div class="cluster-desc">
-                I study how AI can be applied to quantitative finance, DeFi protocols, and economic modeling. This covers algorithmic trading and market microstructure, token mechanism design, and decentralized governance.
-              </div>
-              <div class="cluster-tags">
-                <span class="tag blue">FinTech AI</span>
-                <span class="tag blue">Quantitative Finance</span>
-                <span class="tag blue">AI for Economics</span>
-                <span class="tag blue">Decentralized Finance</span>
-              </div>
-            </div>
-
-            <div class="interest-cluster">
-              <div class="cluster-title">Society, Ethics & Education</div>
-              <div class="cluster-desc">
-                I am interested in how AI shapes and is shaped by social systems. This includes questions of fairness, accountability, and how to design AI that opens up access to education and knowledge rather than closing it off.
-              </div>
-              <div class="cluster-tags">
-                <span class="tag green">AI Ethics</span>
-                <span class="tag green">AI for Education</span>
-                <span class="tag green">Social Computing</span>
-              </div>
-            </div>
-
-            <div class="interest-cluster">
-              <div class="cluster-title">Methods & Theory</div>
-              <div class="cluster-desc">
-                On the methods side, I work on real-world model evaluation, explainable AI, and game-theoretic approaches to multi-agent systems. I am particularly drawn to settings where incentive alignment and strategic behavior matter.
-              </div>
-              <div class="cluster-tags">
-                <span class="tag red">Real-World Models</span>
-                <span class="tag red">Explainable AI</span>
-                <span class="tag red">AI in Game Theory</span>
-              </div>
-            </div>
-
+            <p class="interests-para">
+              <strong>Methods &amp; Theory.</strong> On the methods side, real-world model evaluation, explainable AI, and game-theoretic approaches to multi-agent systems. I am drawn to settings where incentive alignment and strategic behavior matter as much as accuracy.
+            </p>
           </div>
 
         </div>
-      </div>
+      </section>
 
-      <!-- ── FOOTER ─────────────────────────────────── -->
       <footer>
         <span>© 2026 Wilfried Ariel Mulyawan</span>
         <span>Built with GitHub Pages</span>
       </footer>
     </main>
   </div>
-  <script>
-  (function(){
-    var wrap = document.getElementById('globe-wrap');
-    if (!wrap) return;
-    var loaded = false;
-    var load = function(){
-      if (loaded) return; loaded = true;
-      var s = document.createElement('script');
-      s.async = true;
-      s.src = '//mapmyvisitors.com/globe.js?d=dzOnjBhbydRZWBNbs8cArqInT0p_pQ18tftR1NO_Dzg&cl=ffffff&w=148';
-      s.onload = function(){
-        var a = document.getElementById('mmvst_a');
-        if (a) a.href = 'https://mapmyvisitors.com/web/d/dzOnjBhbydRZWBNbs8cArqInT0p_pQ18tftR1NO_Dzg';
-      };
-      wrap.appendChild(s);
-    };
-    if ('IntersectionObserver' in window) {
-      var io = new IntersectionObserver(function(entries){
-        entries.forEach(function(e){ if (e.isIntersecting) { load(); io.disconnect(); } });
-      }, { rootMargin: '200px' });
-      io.observe(wrap);
-    } else {
-      window.addEventListener('load', load);
-    }
-  })();
-  </script>
 </body>
 </html>

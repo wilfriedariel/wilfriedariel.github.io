@@ -50,136 +50,29 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="image" href="assets/face.jpg?v=4">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=11">
+  <link rel="stylesheet" href="style.css?v=29">
 </head>
 <body>
   <div class="page">
 
     <!-- ── NAV ─────────────────────────────────────── -->
     <nav>
-      <span class="nav-logo">Wilfried Ariel</span>
+      <a href="index.html" class="nav-logo">Wilfried Ariel Mulyawan <span class="nav-chinese">陳順福</span></a>
       <div class="nav-links">
         <a href="about.html">About</a>
         <a href="#research" class="active">Research</a>
-        <a href="cv.html">CV</a>
+        <a href="assets/CV_Wilfried_Ariel.pdf" target="_blank" rel="noopener">CV</a>
         <a href="mailto:arielwilfried0@gmail.com">Contact</a>
       </div>
     </nav>
 
     <main class="card">
 
-      <!-- ── HERO ───────────────────────────────────── -->
-      <section class="hero" id="about">
-
-        <div class="hero-info">
-          <h1 class="name">
-            Wilfried Ariel Mulyawan
-            <span class="chinese">陳順福</span>
-          </h1>
-
-          <div class="title-line">
-            <span class="title-text">PhD Student · NTU CCDS × Nanyang Business School · GIFTS Lab</span>
-          </div>
-
-          <p class="bio">
-            Wilfried Ariel Mulyawan is a PhD Student at <a href="https://www.ntu.edu.sg" target="_blank" rel="noopener">Nanyang Technological University</a>, jointly between the College of Computing &amp; Data Science and Nanyang Business School, in the GIFTS Lab. He is advised by <a href="https://www.linwilliamcong.com/" target="_blank" rel="noopener">Prof. Will Cong</a> (previously Cornell) and <a href="https://personal.ntu.edu.sg/gaocong/" target="_blank" rel="noopener">Prof. Gao Cong</a>. His research sits at the intersection of quantitative finance, decentralized finance, and AI — with a focus on how machine learning systems can be designed, evaluated, and deployed in real financial and economic environments.
-          </p>
-
-          <p class="bio">
-            Before NTU, Wilfried was an AI Research Engineer at <a href="https://www.smu.edu.sg" target="_blank" rel="noopener">Singapore Management University</a> with <a href="https://scholar.google.com/citations?user=HM39HrUAAAAJ&amp;hl=en" target="_blank" rel="noopener">Prof. Chong-Wah Ngo</a>, working on vision–language models, cultural AI, and ASEAN benchmarks (EMNLP 2025). He completed his B.Eng. at <a href="https://www.itb.ac.id" target="_blank" rel="noopener">Institut Teknologi Bandung</a>, with a thesis on machine-learning trading strategies for Indonesia's LQ45 index. Outside research, he served as Managing Director of an undisclosed prediction market fund.
-          </p>
-
-          <div class="links">
-            <a href="mailto:arielwilfried0@gmail.com" class="link">arielwilfried0@gmail.com</a>
-            <a href="https://linkedin.com/in/wilfriedariel" target="_blank" rel="noopener" class="link">LinkedIn</a>
-            <a href="#" class="link">Google Scholar</a>
-            <a href="assets/CV_Wilfried_Ariel.pdf" target="_blank" rel="noopener" class="link link-btn">↓ CV</a>
-          </div>
-        </div>
-
-        <div class="photo-stack">
-          <div class="photo-wrap">
-            <img
-              src="assets/face.jpg?v=4"
-              alt="Wilfried Ariel Mulyawan"
-              class="photo"
-              width="280" height="320"
-              fetchpriority="high"
-              decoding="async"
-              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
-            >
-            <div class="photo-fallback">W</div>
-          </div>
-          <div class="photo-wrap photo-wrap-sm">
-            <img
-              src="assets/photo.jpg?v=2"
-              alt="Wilfried Ariel Mulyawan — handstand"
-              class="photo"
-              width="280" height="200"
-              loading="lazy"
-              decoding="async"
-              style="object-position: center 18%;"
-            >
-          </div>
-        </div>
-
-      </section>
-
-      <!-- ── BODY (single column, Andrew Ng style) ──── -->
-      <div class="body-cols" id="research">
+      <!-- ── BODY: main content + uni logos on the right ─ -->
+      <div class="body-cols hero-less" id="research">
 
         <div class="col-left">
-
-          <!-- Research interests as a tag block -->
-          <section class="section">
-            <h2 class="section-title">Research interests</h2>
-            <div class="tags">
-              <span class="tag blue">FinTech AI</span>
-              <span class="tag blue">Quantitative Finance</span>
-              <span class="tag blue">AI for Economics</span>
-              <span class="tag blue">Decentralized Finance</span>
-              <span class="tag green">AI Ethics</span>
-              <span class="tag green">AI for Education</span>
-              <span class="tag green">Social Computing</span>
-              <span class="tag red">Real-World Models</span>
-              <span class="tag red">Explainable AI</span>
-              <span class="tag red">AI in Game Theory</span>
-            </div>
-          </section>
-
-          <!-- Affiliations / Companies (Andrew Ng style cards) -->
-          <section class="section">
-            <h2 class="section-title">Affiliations</h2>
-            <div class="affil-grid">
-
-              <div class="affil-card">
-                <div class="affil-logo"><img src="assets/logo-ntu.jpg" alt="NTU" loading="lazy" decoding="async"></div>
-                <div class="affil-role">PhD Student — Nanyang Technological University</div>
-                <div class="affil-desc">College of Computing &amp; Data Science × Nanyang Business School, GIFTS Lab. Research at the intersection of quantitative finance, DeFi, and AI. 2026 — present.</div>
-              </div>
-
-              <div class="affil-card tint">
-                <div class="affil-logo"><img src="assets/logo-smu.jpg" alt="SMU" loading="lazy" decoding="async"></div>
-                <div class="affil-role">AI Research Engineer — Singapore Management University</div>
-                <div class="affil-desc">Multimedia Lab. Vision–language models, cultural AI, and ASEAN benchmarks under Prof. Chong-Wah Ngo. Co-authored EMNLP 2025 paper. 2025.</div>
-              </div>
-
-              <div class="affil-card tint">
-                <div class="affil-logo"><img src="assets/logo-ntust.png" alt="NTUST" loading="lazy" decoding="async"></div>
-                <div class="affil-role">Research Intern — NTUST CITI Lab, Taipei</div>
-                <div class="affil-desc">RFMS and outcome-economy systems under Prof. Shuo Yan Chou. Demand forecasting and smart-home platforms. 2023.</div>
-              </div>
-
-              <div class="affil-card">
-                <div class="affil-logo"><img src="assets/logo-itb.png" alt="ITB" loading="lazy" decoding="async"></div>
-                <div class="affil-role">B.Eng. — Institut Teknologi Bandung</div>
-                <div class="affil-desc">Thesis on designing machine-learning trading strategies for Indonesia's LQ45 index. Signal design, feature engineering, systematic backtesting. 2020 — 2025.</div>
-              </div>
-
-            </div>
-          </section>
 
           <!-- Publications -->
           <section class="section">
@@ -233,10 +126,19 @@
             </div>
           </section>
 
-          <!-- Globe widget (visitors map) -->
-          <div class="clustr-wrap" id="globe-wrap" style="min-height:200px;"></div>
+          <!-- Visitor map (MapMyVisitors interactive widget) -->
+          <div class="clustr-wrap" id="visitor-map">
+            <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=P5CGpXgZ1azLfrJNoP6b26QXZT2igoppWJTuP63-s3I&cl=f5efe3&w=a"></script>
+          </div>
 
         </div>
+
+        <aside class="research-sidebar">
+          <div class="research-logo-cell"><img src="assets/logo-ntu-clean.png" alt="NTU"   loading="lazy" decoding="async"></div>
+          <div class="research-logo-cell"><img src="assets/logo-smu-clean.png" alt="SMU"   loading="lazy" decoding="async"></div>
+          <div class="research-logo-cell"><img src="assets/logo-ntust.png"     alt="NTUST" loading="lazy" decoding="async"></div>
+          <div class="research-logo-cell"><img src="assets/logo-itb.png"       alt="ITB"   loading="lazy" decoding="async"></div>
+        </aside>
 
       </div>
 
@@ -247,32 +149,5 @@
 
     </main>
   </div>
-  <script>
-  // Lazy-load globe widget when scrolled near viewport
-  (function(){
-    var wrap = document.getElementById('globe-wrap');
-    if (!wrap) return;
-    var loaded = false;
-    var load = function(){
-      if (loaded) return; loaded = true;
-      var s = document.createElement('script');
-      s.async = true;
-      s.src = '//mapmyvisitors.com/globe.js?d=dzOnjBhbydRZWBNbs8cArqInT0p_pQ18tftR1NO_Dzg&cl=ffffff&w=185';
-      s.onload = function(){
-        var a = document.getElementById('mmvst_a');
-        if (a) a.href = 'https://mapmyvisitors.com/web/d/dzOnjBhbydRZWBNbs8cArqInT0p_pQ18tftR1NO_Dzg';
-      };
-      wrap.appendChild(s);
-    };
-    if ('IntersectionObserver' in window) {
-      var io = new IntersectionObserver(function(entries){
-        entries.forEach(function(e){ if (e.isIntersecting) { load(); io.disconnect(); } });
-      }, { rootMargin: '200px' });
-      io.observe(wrap);
-    } else {
-      window.addEventListener('load', load);
-    }
-  })();
-  </script>
 </body>
 </html>
