@@ -4,64 +4,328 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Primary SEO -->
-  <title>Wilfried Ariel Mulyawan | PhD Student · NTU CCDS · AI in Finance &amp; Economics</title>
-  <meta name="title" content="Wilfried Ariel Mulyawan | PhD Student · NTU CCDS · AI in Finance &amp; Economics">
-  <meta name="description" content="Wilfried Ariel Mulyawan (陳順福) — PhD student at NTU CCDS × Nanyang Business School, GIFTS Lab. Researcher in AI for quantitative finance, DeFi, and economic modeling. EMNLP 2025 author.">
-  <meta name="keywords" content="Wilfried Ariel Mulyawan, NTU CCDS, GIFTS Lab, AI finance, quantitative finance, DeFi AI, FinTech AI, economic modeling AI, EMNLP 2025, Seeing Culture benchmark, ITB, SMU, AI researcher Singapore, NTU PhD">
+  <title>About · Wilfried Ariel Mulyawan | PhD Student · NTU CCDS · AI in Finance</title>
+  <meta name="title" content="About · Wilfried Ariel Mulyawan | PhD Student · NTU CCDS">
+  <meta name="description" content="About Wilfried Ariel Mulyawan (陳順福). PhD student at NTU CCDS × Nanyang Business School, GIFTS Lab. Background, research interests in AI for finance, economics, and social systems.">
+  <meta name="keywords" content="Wilfried Ariel Mulyawan, about, NTU CCDS, GIFTS Lab, AI finance, quantitative finance, ITB, SMU, research interests">
   <meta name="author" content="Wilfried Ariel Mulyawan">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://wilfriedariel.github.io/">
 
-  <!-- Open Graph -->
   <meta property="og:type" content="profile">
   <meta property="og:url" content="https://wilfriedariel.github.io/">
-  <meta property="og:title" content="Wilfried Ariel Mulyawan | PhD Student · NTU CCDS">
-  <meta property="og:description" content="PhD student at NTU CCDS × Nanyang Business School, GIFTS Lab. AI researcher in quantitative finance, DeFi, and economic modeling. EMNLP 2025 author.">
+  <meta property="og:title" content="About · Wilfried Ariel Mulyawan | PhD Student · NTU CCDS">
+  <meta property="og:description" content="PhD student at NTU CCDS × Nanyang Business School, GIFTS Lab. Researcher in AI for quantitative finance, DeFi, and economic modeling.">
   <meta property="og:image" content="https://wilfriedariel.github.io/assets/face.jpg">
   <meta property="og:site_name" content="Wilfried Ariel Mulyawan">
-  <meta property="profile:first_name" content="Wilfried Ariel">
-  <meta property="profile:last_name" content="Mulyawan">
 
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://wilfriedariel.github.io/">
-  <meta name="twitter:title" content="Wilfried Ariel Mulyawan | PhD Student · NTU CCDS">
-  <meta name="twitter:description" content="PhD student at NTU CCDS × Nanyang Business School, GIFTS Lab. AI in quantitative finance, DeFi, and economics. EMNLP 2025.">
+  <meta name="twitter:title" content="About · Wilfried Ariel Mulyawan | NTU CCDS">
+  <meta name="twitter:description" content="PhD student at NTU CCDS × Nanyang Business School, GIFTS Lab. AI in quantitative finance, DeFi, economics.">
   <meta name="twitter:image" content="https://wilfriedariel.github.io/assets/face.jpg">
-
-  <!-- Schema.org structured data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Wilfried Ariel Mulyawan",
-    "alternateName": "陳順福",
-    "url": "https://wilfriedariel.github.io",
-    "image": "https://wilfriedariel.github.io/assets/face.jpg",
-    "jobTitle": "PhD Student",
-    "worksFor": { "@type": "Organization", "name": "Nanyang Technological University", "url": "https://www.ntu.edu.sg" },
-    "alumniOf": { "@type": "Organization", "name": "Institut Teknologi Bandung" },
-    "email": "arielwilfried0@gmail.com",
-    "sameAs": ["https://linkedin.com/in/wilfriedariel"],
-    "knowsAbout": ["Quantitative Finance", "AI in Finance", "Machine Learning", "Decentralized Finance", "Economic Modeling", "FinTech AI"]
-  }
-  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="assets/face.jpg?v=4">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=29">
+  <link rel="stylesheet" href="style.css?v=30">
+  <style>
+    /* ── ABOUT SECTION: photos left, bullets right ── */
+    .about-wrap {
+      display: flex;
+      gap: 56px;
+      padding: 56px 0 0;
+      align-items: flex-start;
+    }
+
+    .about-sidebar {
+      width: 280px;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      text-align: left;
+    }
+
+    .about-photo-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .about-photo-wrap,
+    .about-photo-wrap-sm {
+      width: 280px;
+      border-radius: 3px;
+      overflow: hidden;
+      background: var(--bg-2);
+      box-shadow: 0 1px 2px rgba(31, 27, 22, 0.06);
+    }
+
+    .about-photo-wrap   { height: 330px; }
+    .about-photo-wrap-sm { height: 280px; }
+
+    .about-ntu-card {
+      width: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .about-ntu-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      image-rendering: -webkit-optimize-contrast;
+    }
+
+    .about-photo-wrap img,
+    .about-photo-wrap-sm img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .about-name {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.2;
+      margin-top: 4px;
+    }
+
+    .about-subtitle {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 14px;
+      font-style: italic;
+      color: var(--ink-2);
+      line-height: 1.5;
+      margin-top: 6px;
+      margin-bottom: 18px;
+    }
+
+    .about-links {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+      align-items: center;
+    }
+
+    .about-link-icon {
+      width: 38px;
+      height: 38px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--link);
+      text-decoration: none;
+      background: transparent;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      padding: 0;
+      transition: color 0.15s, border-color 0.15s, background 0.15s;
+    }
+
+    .about-link-icon svg {
+      width: 17px;
+      height: 17px;
+      fill: currentColor;
+    }
+
+    .about-link-icon:hover {
+      background: var(--bg-2);
+      color: var(--link-2);
+      border-color: var(--link-2);
+    }
+
+    .sidebar-logos {
+      width: 100%;
+      margin-top: 8px;
+      border-top: 1px solid var(--line);
+      padding-top: 22px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .sidebar-logo-cell {
+      background: var(--bg-2);
+      border: 1px solid var(--line);
+      border-radius: 3px;
+      height: 110px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px;
+    }
+
+    .sidebar-logo-img {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      image-rendering: -webkit-optimize-contrast;
+    }
+
+    .sidebar-quote {
+      width: 100%;
+      margin-top: 28px;
+      padding: 0 4px;
+      text-align: center;
+    }
+
+    .sidebar-quote::before {
+      content: '';
+      display: block;
+      width: 36px;
+      height: 1px;
+      background: var(--ink-3);
+      margin: 0 auto 18px;
+    }
+
+    .sidebar-quote .quote-latin {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 19px;
+      font-style: italic;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.3;
+      letter-spacing: 0.1px;
+    }
+
+    .sidebar-quote .quote-translation {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 13.5px;
+      font-style: italic;
+      font-weight: 400;
+      color: var(--ink-3);
+      line-height: 1.5;
+      margin-top: 8px;
+    }
+
+    .sidebar-map {
+      width: 100%;
+      margin-top: 22px;
+      border-top: 1px solid var(--line);
+      padding-top: 22px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .sidebar-map:not(:empty)::before {
+      content: 'Visitors';
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 16px;
+      font-style: italic;
+      font-weight: 600;
+      color: var(--ink-2);
+    }
+
+    .about-main {
+      flex: 1;
+      min-width: 0;
+      padding-top: 4px;
+    }
+
+    .about-h2 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--ink);
+      letter-spacing: -0.3px;
+      margin-bottom: 24px;
+      line-height: 1.1;
+    }
+
+    /* Bullet list — easier scan, warm palette */
+    .about-bullets {
+      list-style: disc;
+      padding-left: 22px;
+    }
+
+    .about-bullets li {
+      font-size: 15.5px;
+      color: var(--ink-2);
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+
+    .about-bullets li::marker { color: var(--ink-3); }
+
+    .about-bullets li:last-child { margin-bottom: 0; }
+
+    .about-bullets li strong { color: var(--ink); font-weight: 600; }
+
+    .about-bullets li a {
+      color: var(--link);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(125, 75, 39, 0.35);
+      padding-bottom: 1px;
+      transition: color 0.15s, border-color 0.15s;
+    }
+
+    .about-bullets li a:hover { color: var(--link-2); border-bottom-color: var(--link-2); }
+
+    /* ── RESEARCH INTERESTS — lives inside about-main, below bullets ── */
+    .interests-block {
+      margin-top: 56px;
+      padding-top: 36px;
+      border-top: 1px solid var(--line);
+    }
+
+    .interests-block .about-h2 { margin-bottom: 24px; }
+
+    .interests-para {
+      font-size: 16px;
+      color: var(--ink-2);
+      line-height: 1.78;
+      margin-bottom: 20px;
+      max-width: 720px;
+    }
+
+    .interests-para:last-child { margin-bottom: 0; }
+
+    .interests-para strong {
+      color: var(--ink);
+      font-weight: 600;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 18px;
+      font-style: italic;
+      letter-spacing: 0.1px;
+      margin-right: 4px;
+    }
+
+    @media (max-width: 760px) {
+      .about-wrap {
+        flex-direction: column;
+        gap: 36px;
+        padding: 36px 0 0;
+      }
+      .about-sidebar { width: 100%; }
+      .about-photo-stack { flex-direction: row; gap: 12px; }
+      .about-photo-wrap, .about-photo-wrap-sm { width: 50%; height: 240px; }
+      .about-h2 { font-size: 26px; }
+      .interests-wrap { padding-top: 52px; margin-top: 52px; }
+    }
+  </style>
 </head>
 <body>
   <div class="page">
 
-    <!-- ── NAV ─────────────────────────────────────── -->
     <nav>
       <a href="index.html" class="nav-logo">Wilfried Ariel Mulyawan <span class="nav-chinese">陳順福</span></a>
       <div class="nav-links">
-        <a href="about.html">About</a>
-        <a href="#research" class="active">Research</a>
+        <a href="index.html" class="active">About</a>
+        <a href="research.html">Research</a>
         <a href="assets/CV_Wilfried_Ariel.pdf" target="_blank" rel="noopener">CV</a>
         <a href="mailto:arielwilfried0@gmail.com">Contact</a>
       </div>
@@ -69,94 +333,104 @@
 
     <main class="card">
 
-      <!-- ── BODY: main content + uni logos on the right ─ -->
-      <div class="body-cols hero-less" id="research">
+      <!-- ── ABOUT SECTION: photos + bullets ────────── -->
+      <section class="about-wrap">
+        <aside class="about-sidebar">
 
-        <div class="col-left">
-
-          <!-- Publications -->
-          <section class="section">
-            <h2 class="section-title">Publications</h2>
-
-            <div class="pub featured">
-              <div class="pub-title">Seeing Culture: A Benchmark for Visual Reasoning and Grounding</div>
-              <div class="pub-authors">Burak Satar, Zhixin Ma, Patrick, Wilfried Ariel Mulyawan · SMU Multimedia Lab</div>
-              <div class="pub-meta">
-                <span class="badge blue-solid">EMNLP 2025 Main</span>
-                <a href="https://aclanthology.org/2025.emnlp-main.1131/" target="_blank" rel="noopener" class="pub-link">paper</a>
-                <a href="https://arxiv.org/abs/2509.16517" target="_blank" rel="noopener" class="pub-link">arXiv</a>
-                <a href="https://github.com/buraksatar/seeingculture" target="_blank" rel="noopener" class="pub-link">code</a>
-                <a href="https://huggingface.co/datasets/Multimedia-SMU/seeingculture-benchmark" target="_blank" rel="noopener" class="pub-link">data</a>
-                <a href="https://seeingculture-benchmark.github.io/" target="_blank" rel="noopener" class="pub-link">site</a>
-              </div>
+          <div class="about-photo-stack">
+            <div class="about-photo-wrap">
+              <img src="assets/face.jpg?v=4" alt="Wilfried Ariel Mulyawan" width="280" height="330" fetchpriority="high" decoding="async">
             </div>
-
-            <div class="pub muted">
-              <div class="pub-title">Designing LQ45 Stock Trading Strategies with Machine Learning</div>
-              <div class="pub-authors">Wilfried Ariel Mulyawan · Institut Teknologi Bandung</div>
-              <div class="pub-meta">
-                <span class="badge yellow">Bachelor Thesis · 2025</span>
-                <a href="https://digilib.itb.ac.id/gdl/view_data/perancangan-strategi-perdagangan-saham-lq45-dengan-bantuan-pembelajaran-mesin/14420020?rows=1&per_page=2" target="_blank" rel="noopener" class="pub-link">thesis</a>
-              </div>
+            <div class="about-ntu-card">
+              <img src="assets/logo-ntu-clean.png" alt="NTU" loading="lazy" decoding="async">
             </div>
-          </section>
-
-          <!-- Recent news -->
-          <section class="section">
-            <h2 class="section-title">Recent</h2>
-
-            <div class="news-item first">
-              <span class="news-date">May 2026</span>
-              <p class="news-text">PhD offer accepted. Joining <strong>GIFTS Lab, NTU</strong> (Global Institute of Finance, Technology, and Society).</p>
+            <div class="about-photo-wrap-sm">
+              <img src="assets/photo.jpg?v=2" alt="Wilfried Ariel Mulyawan handstand" width="280" height="280" loading="lazy" decoding="async">
             </div>
+          </div>
 
-            <div class="news-item">
-              <span class="news-date">Feb 2026</span>
-              <p class="news-text">Promoted to Managing Director at my undisclosed hedge fund.</p>
-            </div>
+          <div class="about-name">Wilfried Ariel Mulyawan</div>
+          <div class="about-subtitle">
+            PhD Student in Artificial Intelligence<br>
+            NTU CCDS × Nanyang Business School<br>
+            GIFTS Lab
+          </div>
 
-            <div class="news-item">
-              <span class="news-date">Dec 2025</span>
-              <p class="news-text">Joined my undisclosed hedge fund as Portfolio Manager.</p>
-            </div>
+          <div class="about-links">
+            <a href="https://scholar.google.com/citations?user=K3SKG2kAAAAJ&hl=en" target="_blank" rel="noopener" class="about-link-icon" aria-label="Google Scholar" title="Google Scholar">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.242 13.769L0.5 9.5 12 1l11.5 8.5-4.742 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
+            </a>
+            <a href="https://linkedin.com/in/wilfriedariel" target="_blank" rel="noopener" class="about-link-icon" aria-label="LinkedIn" title="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/wilfriedariel/" target="_blank" rel="noopener" class="about-link-icon" aria-label="Instagram" title="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.85 5.85 0 0 0-2.13 1.38A5.85 5.85 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.73 1.46 1.38 2.13.67.65 1.34 1.07 2.13 1.38.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.85 5.85 0 0 0 2.13-1.38c.65-.67 1.07-1.34 1.38-2.13.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.85 5.85 0 0 0-1.38-2.13A5.85 5.85 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 12 18.16 6.16 6.16 0 0 0 12 5.84zm0 10.16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.41-11.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg>
+            </a>
+            <!-- X (Twitter) — replace href with your X profile URL -->
+            <a href="https://x.com/wacsfu" target="_blank" rel="noopener" class="about-link-icon" aria-label="X (Twitter)" title="X">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <!-- GitHub — replace href with your GitHub profile URL -->
+            <a href="https://github.com/wilfriedariel" target="_blank" rel="noopener" class="about-link-icon" aria-label="GitHub" title="GitHub">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.4 3-.405 1.02.005 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            </a>
+          </div>
 
-            <div class="news-item">
-              <span class="news-date">Nov 2025</span>
-              <p class="news-text"><em>Seeing Culture</em> presented at EMNLP 2025 Main Conference.</p>
-            </div>
-
-            <div class="news-item faded">
-              <span class="news-date">Sep 2024</span>
-              <p class="news-text">Nearly dropped out of university due to unwanted circumstances. Funny in retrospect :)</p>
-            </div>
-
-            <div class="news-item faded">
-              <span class="news-date">Aug 2023</span>
-              <p class="news-text">IISMA Awardee. 1 of 14 selected from 12,000+ applicants for a fully funded exchange semester at NTUST, Taiwan.</p>
-            </div>
-          </section>
+          <!-- Favorite quote -->
+          <div class="sidebar-quote">
+            <p class="quote-latin">Nihil tetigit quod non ornavit</p>
+            <p class="quote-translation">"He made everything he touched beautiful."</p>
+          </div>
 
           <!-- Visitor map (MapMyVisitors interactive widget) -->
-          <div class="clustr-wrap" id="visitor-map">
+          <div class="sidebar-map" id="visitor-map">
             <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=P5CGpXgZ1azLfrJNoP6b26QXZT2igoppWJTuP63-s3I&cl=f5efe3&w=a"></script>
+          </div>
+        </aside>
+
+        <div class="about-main">
+          <h2 class="about-h2">About</h2>
+          <ul class="about-bullets">
+            <li>
+              I am a <strong>PhD student</strong> at NTU CCDS × Nanyang Business School, GIFTS Lab. My main advisor is <a href="https://www.linwilliamcong.com/" target="_blank" rel="noopener">Prof. Will Cong</a> (previously at Cornell), and I am co-advised by <a href="https://personal.ntu.edu.sg/gaocong/" target="_blank" rel="noopener">Prof. Gao Cong</a>. I work on questions at the boundary of AI in finance, FinTech, quantitative finance, and social computing.
+            </li>
+            <li>
+              My current research interests beyond the core focus include <strong>real-world modeling</strong>, <strong>explainable AI</strong>, <strong>market making</strong>, <strong>prediction markets</strong>, <strong>AI for game theory</strong> (Pokémon VGC), <strong>AI for education</strong>, and <strong>deep learning for protein design</strong>.
+            </li>
+            <li>
+              Outside research, I managed a prediction market fund as <strong>Managing Director</strong> (7-figure USD volume). My speciality: US egg market prices (USD/Dozen). Yes, that's a real thing.
+            </li>
+            <li>
+              Before starting my PhD, I was an <strong>AI Research Engineer</strong> at Singapore Management University's AI Multimedia Team, working on vision–language models, cultural AI, and ASEAN benchmarks with <a href="https://scholar.google.com/citations?user=HM39HrUAAAAJ&hl=en" target="_blank" rel="noopener">Prof. Chong-Wah Ngo</a>.
+            </li>
+            <li>
+              Before that, a <strong>Research Intern</strong> at <a href="https://citi-ntust.net/" target="_blank" rel="noopener">NTUST CITI Lab</a> in Taipei under <a href="https://scholar.google.com/citations?user=FBH93t0AAAAJ&hl=en" target="_blank" rel="noopener">Prof. Shuo Yan Chou</a>, working on RFMS and leading the outcome-economy research there.
+            </li>
+          </ul>
+
+          <div class="interests-block">
+            <h2 class="about-h2">Research interests</h2>
+
+            <p class="interests-para">
+              <strong>Finance &amp; Economic AI.</strong> My research applies AI to quantitative finance, DeFi protocols, and economic modeling. This covers algorithmic trading and market microstructure, token mechanism design, and decentralized governance: the parts of finance where the questions are noisy, adversarial, and impossible to fully simulate.
+            </p>
+
+            <p class="interests-para">
+              <strong>Society, Ethics &amp; Education.</strong> I think about how AI shapes and is shaped by social systems. Fairness, accountability, and how to design AI that opens up access to education and knowledge rather than closing it off. As autonomous hedge funds rise, accountability becomes a real question: who do we blame if something goes wrong?
+            </p>
+
+            <p class="interests-para">
+              <strong>Methods &amp; Theory.</strong> On the methods side, real-world model evaluation, explainable AI, and game-theoretic approaches to multi-agent systems. I am drawn to settings where incentive alignment and strategic behavior matter as much as accuracy.
+            </p>
           </div>
 
         </div>
-
-        <aside class="research-sidebar">
-          <div class="research-logo-cell"><img src="assets/logo-ntu-clean.png" alt="NTU"   loading="lazy" decoding="async"></div>
-          <div class="research-logo-cell"><img src="assets/logo-smu-clean.png" alt="SMU"   loading="lazy" decoding="async"></div>
-          <div class="research-logo-cell"><img src="assets/logo-ntust.png"     alt="NTUST" loading="lazy" decoding="async"></div>
-          <div class="research-logo-cell"><img src="assets/logo-itb.png"       alt="ITB"   loading="lazy" decoding="async"></div>
-        </aside>
-
-      </div>
+      </section>
 
       <footer>
         <span>© 2026 Wilfried Ariel Mulyawan</span>
         <span>Built with GitHub Pages</span>
       </footer>
-
     </main>
   </div>
 </body>
